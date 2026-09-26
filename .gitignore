@@ -13,3 +13,4 @@ Thumbs.db
 # Node-RED runtime
 nodered/data/*.log
 nodered/data/.config.runtime.json
+!nodered/data/.gitkeep
