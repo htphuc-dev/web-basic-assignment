@@ -1,5 +1,4 @@
 .env
-
 # Docker
 *.log
 
@@ -11,6 +10,5 @@ Thumbs.db
 .vscode/
 
 # Node-RED runtime
-nodered/data/*.log
-nodered/data/.config.runtime.json
+nodered/data/*
 !nodered/data/.gitkeep
