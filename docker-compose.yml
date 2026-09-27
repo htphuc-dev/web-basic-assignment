@@ -51,7 +51,15 @@ services:
       - mariadb
     networks:
       - web_network
-
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: web_cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - nginx
+    networks:
+      - web_network
 networks:
   web_network:
 
